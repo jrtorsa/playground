@@ -1,14 +1,45 @@
 {
-    "extends": [
-        "airbnb", "prettier"
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "prettier/prettier"
+  ],
+  "parser": "babel-eslint",
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "function-declaration"
+      }
     ],
-
-    "rules": {
-        "prettier/prettier": "error",
-        "no-unused-vars": "warn",
-        "no-console": "off",
-        "func-names": "off",
-        "object-shorthand": "off",
-        "class-methods-use-this": "off"
-    }
+    "react/state-in-constructor": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-return-await": "off"
+  }
 }
