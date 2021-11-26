@@ -32,6 +32,14 @@
         "namedComponents": "function-declaration"
       }
     ],
-    "react/state-in-constructor": "off"
+    "react/state-in-constructor": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-return-await": "off"
   }
 }
