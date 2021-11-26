@@ -1,9 +1,15 @@
 import React from 'react';
+import Movies from './components/Movies';
+import useApi from './hooks/useApi';
 
 function App() {
+  const { movies, characters, quotes } = useApi();
+
+  console.log('movies', movies);
+
   return (
     <div className="App">
-      <h1>hola</h1>
+      <Movies movies={movies} />
     </div>
   );
 }
